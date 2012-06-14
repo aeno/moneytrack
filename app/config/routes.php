@@ -19,21 +19,9 @@
 use lithium\net\http\Router;
 use lithium\core\Environment;
 
-/**
- * Here, we are connecting `'/'` (the base path) to controller called `'Pages'`,
- * its action called `view()`, and we pass a param to select the view file
- * to use (in this case, `/views/pages/home.html.php`; see `app\controllers\PagesController`
- * for details).
- *
- * @see app\controllers\PagesController
- */
-Router::connect('/', 'Pages::view');
-
-/**
- * Connect the rest of `PagesController`'s URLs. This will route URLs like `/pages/about` to
- * `PagesController`, rendering `/views/pages/about.html.php` as a static page.
- */
-Router::connect('/pages/{:args}', 'Pages::view');
+Router::connect('/', 'Transactions::index');
+Router::connect('/{:controller}/{:action}');
+Router::connect('/{:controller}/{:action}/{:id}');
 
 /**
  * Add the testing routes. These routes are only connected in non-production environments, and allow

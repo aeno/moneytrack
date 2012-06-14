@@ -18,10 +18,7 @@
 <body class="app">
 	<div id="container">
 		<div id="header">
-			<h1>Application</h1>
-			<h2>
-				Powered by <?php echo $this->html->link('Lithium', 'http://lithify.me/'); ?>.
-			</h2>
+			<h1>moneytrack</h1>
 		</div>
 		<div id="content">
 			<?php echo $this->content(); ?>
